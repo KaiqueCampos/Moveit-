@@ -22,7 +22,7 @@ export function CountdownProvider({ children }) {
     let countdownTimeout: NodeJS.Timeout;
 
     // Define os minutos e segundos em suas propriedades
-    const [time, setTime] = useState(0.1 * 60);
+    const [time, setTime] = useState(60 * 25);
     const [isActive, setIsActive] = useState(false);
     const [hasFinished, setHasFinished] = useState(false);
 
@@ -39,7 +39,7 @@ export function CountdownProvider({ children }) {
         clearTimeout(countdownTimeout);
         setIsActive(false);
         setHasFinished(false);
-        setTime(0.1 * 60);
+        setTime(60 * 25);
     }
 
     // Temporizador

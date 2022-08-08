@@ -1,7 +1,6 @@
-import { createContext, useState, ReactNode, useEffect } from 'react'
-import challenges from '../../challenges.json'
-import MyApp from '../pages/_app';
 import Cookies from 'js-cookie';
+import { createContext, ReactNode, useEffect, useState } from 'react';
+import challenges from '../../challenges.json';
 import { LevelUpModal } from '../components/LevelUpModal';
 
 interface Challenge {
@@ -133,7 +132,8 @@ export function ChallengesProvider({
         >
             {children}
 
-            { isLevelUpModalOpen && <LevelUpModal />}
+            { isLevelUpModalOpen && <LevelUpModal />
+            }
         </ChallengesContext.Provider>
     )
 }
